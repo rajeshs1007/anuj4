@@ -165,7 +165,7 @@ export default function RecordList() {
   // Fetch records on initial mount
   useEffect(() => {
     async function getRecords() {
-      const response = await fetch(`http://202.54.6.99:4000/record/`);
+      const response = await fetch(`http://localhost:4000/record/`);
 
       if (!response.ok) {
         const message = `An error occurred: ${response.statusText}`;
@@ -187,7 +187,7 @@ export default function RecordList() {
 
   // Function to delete a record
   async function deleteRecord(id) {
-    await fetch(`http://202.54.6.99:4000/record/${id}`, {
+    await fetch(`http://localhost:4000/record/${id}`, {
       method: "DELETE",
     });
 
